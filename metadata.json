@@ -1,0 +1,49 @@
+{
+  "name": "neillturner-gitsource",
+  "version": "0.0.1",
+  "author": "neillturner",
+  "summary": "Install git by compiling source to get newer versions",
+  "license": "Apache-2.0",
+  "source": "https://github.com/neillturner/puppet-gitsource.git",
+  "project_page": "https://github.com/neillturner/puppet-gitsource",
+  "issues_url": "https://github.com/neillturner/puppet-gitsource/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "5",
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "requirements": [
+    { "name": "puppet", "version_requirement": "3.x" }
+  ],
+  "dependencies": [
+  ]
+}
+
