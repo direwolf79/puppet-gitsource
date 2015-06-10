@@ -7,6 +7,7 @@
   "source": "https://github.com/neillturner/puppet-gitsource.git",
   "project_page": "https://github.com/neillturner/puppet-gitsource",
   "issues_url": "https://github.com/neillturner/puppet-gitsource/issues",
+  "tags": ["git", "source", "build", "make"],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
