@@ -46,10 +46,10 @@ class gitsource (
   }
   
   if $::osfamily == 'RedHat'{
-    file_line { 'export PATH=$PATH:/usr/local/git/bin':
-      ensure  => present,
-      path    => '/etc/bashrc',
-      line    => 'export PATH=$PATH:/usr/local/git/bin',
+    exec { 'ln -s /usr/local/git/bin/git /usr/local/git':
+      command => 'ln -s /usr/local/git /usr/local/git/bin/git',
+      unless  => "test -f /usr/local/git",
+      timeout => 0,
       require => Exec['make git install'],
     }
   }
