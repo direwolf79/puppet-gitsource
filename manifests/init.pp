@@ -46,9 +46,9 @@ class gitsource (
   }
   
   if $::osfamily == 'RedHat'{
-    exec { 'ln -s /usr/local/git/bin/git /usr/local/git':
-      command => 'ln -s /usr/local/git /usr/local/git/bin/git',
-      unless  => "test -f /usr/local/git",
+    exec { 'ln -s /usr/local/git/bin/git /usr/local/bin/git':
+      command => 'ln -s /usr/local/git/bin/git /usr/local/bin/git',
+      unless  => "test -f /usr/local/bin/git",
       timeout => 0,
       require => Exec['make git install'],
     }
