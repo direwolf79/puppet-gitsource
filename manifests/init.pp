@@ -32,6 +32,7 @@ class gitsource (
   exec { 'make git all':
     command => 'make prefix=/usr/local/git all',
     cwd     => "/tmp/git-${version}",
+    unless  => "test -f /usr/local/git/bin/git",
     timeout => 0,
     require => Exec['untar git source'],
   }
@@ -39,6 +40,7 @@ class gitsource (
   exec { 'make git install':
     command => 'make prefix=/usr/local/git install',
     cwd     => "/tmp/git-${version}",
+    unless  => "test -f /usr/local/git/bin/git",
     timeout => 0,
     require => Exec['make git all'],
   }
